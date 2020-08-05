@@ -1,0 +1,173 @@
+.fondo_proyectos img{
+    width: 100%;
+    height: 387px;
+    opacity: 0.8;
+}
+.lo-que-hacemos{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.lo-que-hacemos .section__titulo{
+    margin-bottom: 30px;
+}
+.lo-que-hacemos__navegador{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 400px;
+    margin-bottom: 40px;
+}
+.navegador__menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+    width: 85%;
+    margin: auto;
+    
+}
+.navegador__menu a{
+    background: #f2f1ef;
+    color: #000;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 12px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.navegador__menu a:hover,
+.navegador__menu .select_menu{
+    background: #f57d2d;
+    color: #fff;
+}
+.navegador__menu a:hover{
+    font-size: 18px;
+}
+.navedador__descripcion_proyectos,
+.navedador__descripcion_voluntariado{
+    width: 85%;
+    margin: auto;
+    text-align: justify;
+}
+.navedador__descripcion_proyectos{
+    display: block;
+}
+.navedador__descripcion_voluntariado{
+    display: block;
+}
+
+/*Sección proyectos*/
+.proyectos__columna,
+.voluntariado__columna{
+    width: 85%;
+    margin: auto;
+    transition: 0.5s;
+}
+.proyectos__columna:hover,
+.voluntariado__columna:hover{
+    cursor: pointer;
+    width: 95%;
+}
+.proyectos__columna a,
+.voluntariado__columna a{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    background: #f2f1ef;
+    margin-bottom: 20px;
+    text-decoration: inherit;
+    color: #000;
+}
+.proyectos__columna a img,
+.voluntariado__columna a img{
+    width: 85%;
+    margin: auto;
+    padding-top: 10px;
+}
+.proyectos__columna a h3,
+.voluntariado__columna a h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.proyectos__columna a p,
+.voluntariado__columna a p{
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    line-height: 22px;
+    padding: 10px 0;
+}
+
+/*Información*/
+.informacion__contenido{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #f2f1ef;
+}
+.informacion__contenido img{
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
+    border-radius: 50px;
+}
+.informacion__contenido h3{
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
+}
+.informacion__contenido p{
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+
+@media(min-width:480px){
+    .proyectos__columna, .voluntariado__columna{
+        width: 75%;
+    }
+}
+@media(min-width:768px){
+
+    .proyectos, .voluntariado{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 75%;
+        margin: auto;
+    }
+    .proyectos__columna, .voluntariado__columna{
+        width: 90%;
+    }
+}
+@media(min-width:1024px){
+
+    .lo-que-hacemos{
+        grid-template-columns: 35% 65%;
+    }
+    .lo-que-hacemos .section__titulo{
+        grid-column: 1 / 3;
+        margin-bottom: 30px;
+    }
+    .lo-que-hacemos__navegador{
+        padding-bottom: 100px;
+    }
+
+    .navegador__menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100px;
+    }
+    .navegador__menu{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .lo-que-hacemos .lo-que-hacemos__contenido .proyectos{
+        width: 100%;
+    }
+    .lo-que-hacemos .lo-que-hacemos__contenido .voluntariado{
+        width: 100%;
+        /* display: none; */
+    }
+
+}
