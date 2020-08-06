@@ -1,0 +1,262 @@
+/* .fondo_nosotros img{
+    width: 100%;
+    height: 387px;
+    opacity: 0;
+} */
+/*Sobre nosotros*/
+.animado{
+    opacity: 0;
+    transform: all 3s;
+}
+.mostrarArriba{
+    animation: mostrarArriba 1s;
+}
+
+.sobre_nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-bottom: -20px;
+}
+.sobre_nosotros .section__titulo,
+.valores_corporativos .section__titulo{
+    text-transform: uppercase;
+    animation: mostrarArriba 1s;
+}
+
+.sobre_nosotros__columna{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 0;
+}
+@keyframes mostrarArriba{
+    0%{
+        transform: translateY(120px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.sobre_nosotros__columna:nth-child(2){
+    margin-top: 20px;
+}
+.sobre_nosotros__columna:nth-child(3){
+    background-color: #F2F1EF;
+}
+.sobre_nosotros__icon i{
+    font-size: 40px;
+    color: #f57d2d;
+}
+.sobre_nosotros__icon i:first-child{
+    border: solid 3px #f57d2d;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding-top: 7px;
+}
+.sobre_nosotros__icon img{
+    width: 60px;
+}
+
+.sobre_nosotros__info h3{
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.sobre_nosotros__info p{
+    width: 85%;
+    margin: auto;
+    text-align: justify;
+}
+
+/*Valores Corporativos*/
+.valores_corporativos{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #F2F1EF;
+}
+
+.valores_corporativos_columna{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding-top: 40px;
+    width: 90%;
+    margin: auto;
+}
+.valores_corporativos_columna p{
+    grid-column: 1 / 3;
+    text-align: justify;
+}
+
+.valores_corporativos_columna i{
+    color: #f57d2d;
+    font-size: 40px;
+}
+.valores_corporativos_columna h3{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    padding-right: 25%;
+}
+
+/*NUESTRO EQUIPO*/
+
+/*Historia*/
+.historia{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.historia .section__titulo,
+.hitos .section__titulo{
+    text-transform: uppercase;
+}
+.historia p{
+    padding-top: 20px;
+    text-align: justify;
+    width: 85%;
+    margin: auto;
+}
+
+/*Hitos*/
+.hitos{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #F2F1EF;
+    padding: 30px 30px;
+}
+.hitos__columna{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background: #fff;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    /* width: 90%;
+    margin: auto; */
+}
+/* .hitos__columna:first-child{
+    margin-top: 30px;
+} */
+.hitos__columna h4{
+    background: #f57d2d;
+    color: #fff;
+}
+.hitos__columna img{
+    width: 100%;
+    padding: 10px 20px;
+    margin: auto;
+}
+.hitos__columna p{
+    text-align: justify;
+    padding: 10px 20px;
+}
+
+/*Responsive*/
+
+@media(min-width:480px){
+    .sobre_nosotros__info p{
+        width: 75%;
+    }
+    .valores_corporativos_columna{
+        width: 75%;
+    }
+
+    /*NUESTRO EQUIPO*/
+
+    /*historia*/
+    .historia p{
+        width: 70%;
+    }
+
+    /*Hitos*/
+    .hitos{
+        grid-template-columns: 1fr 1fr;
+    }
+    .hitos .section__titulo{
+        grid-column: 1/ 3;
+    }
+    .hitos__columna{
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+}
+
+@media(min-width:768px){
+    .sobre_nosotros__columna{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+    }
+    .sobre_nosotros__columna:nth-child(3){
+        direction: rtl;
+    }
+    .sobre_nosotros__columna h3{
+        font-weight: 300;
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+    .sobre_nosotros__columna p{
+        font-weight: 100;
+        line-height: 20px;
+        width: 85%;
+        font-size: 15px;
+    }
+    .sobre_nosotros__icon.icon1,
+    .sobre_nosotros__icon.icon3{
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .sobre_nosotros__icon.icon2{
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .sobre_nosotros__icon i{
+        font-size: 90px;
+    }
+    .sobre_nosotros__icon i:first-child{
+        border: solid 8px #f57d2d;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        padding-top: 20px;
+    }    
+    .sobre_nosotros__icon img{
+        width: 150px;
+        height: 150px;
+    }
+
+    /*Valor corporativo*/
+    .valores_corporativos{
+        grid-template-columns: 1fr 1fr;
+    }
+    .valores_corporativos .section__titulo{
+        grid-column: 1 / 3;
+    }
+
+    /*NUESTRO EQUIPO*/
+
+    /*Hitos*/
+    .hitos{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+@media(min-width:1024px){
+    .sobre_nosotros__columna{
+        padding: 50px 100px;
+    }
+    .valores_corporativos{
+        padding: 50px 100px;
+    }
+    .valores_corporativos_columna h3{
+        font-size: 20px;
+    }    
+}

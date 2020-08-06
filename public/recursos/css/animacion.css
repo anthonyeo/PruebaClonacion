@@ -1,0 +1,39 @@
+.animado,
+.animadoIzquierda,
+.animadoDerecha{
+    opacity: 0;
+    transform: all 0.5s;
+}
+.mostrarArriba{
+    animation: mostrarArriba 1s;
+}
+.mostrarDerecha{
+    animation: mostrarDerecha 1.5s;
+}
+.mostrarIzquierda{
+    animation: mostrarIzquierda 1.5s;
+}
+@keyframes mostrarArriba{
+    0%{
+        transform: translateY(120px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes mostrarDerecha{
+    0%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes mostrarIzquierda{
+    0%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
